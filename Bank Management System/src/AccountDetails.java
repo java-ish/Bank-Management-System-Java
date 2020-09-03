@@ -17,17 +17,11 @@ public class AccountDetails {
 		}
 		System.out.println("");
 		
-		System.out.println("Enter your account number:");
-		String logInAccNum = userInpt.nextLine();
-		
-		System.out.println("Enter your PIN number:");
-		String logInPIN = userInpt.nextLine();
-		
 		logIn logInObj = new logIn();
 		
 //		checking and further execution
-		if (logInObj.logInCheck(logInAccNum, logInPIN)) {
-			AccountDetailsView.display(logInAccNum);
+		if (logInObj.logInCheck(OpeningScreen.logInAccNum, OpeningScreen.logInPIN)) {
+			AccountDetailsView.display(OpeningScreen.logInAccNum);
 		}
 		else {
 //			layout
